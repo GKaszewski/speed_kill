@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://emrbw0o7ft23"]
 
 [ext_resource type="Script" path="res://scripts/fps_controller.gd" id="1_hc3cq"]
-[ext_resource type="PackedScene" uid="uid://l874wwubl5rq" path="res://models/pistol.glb" id="2_b26li"]
+[ext_resource type="PackedScene" uid="uid://dtl7ypuva5r34" path="res://models/pistol.glb" id="2_b26li"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ac4nd"]
 
@@ -48,7 +48,7 @@ max_results = 2
 [node name="Weapons" type="Node3D" parent="HeadOriginalPosition/Head/CameraSmooth/Camera3D"]
 
 [node name="pistol" parent="HeadOriginalPosition/Head/CameraSmooth/Camera3D/Weapons" instance=ExtResource("2_b26li")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.279082, -0.510521)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.236026, -0.480237)
 
 [node name="StairsAheadRayCast3D" type="RayCast3D" parent="."]
 unique_name_in_owner = true
