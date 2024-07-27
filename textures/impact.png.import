@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d35ud0lcbpfw0"
-path.s3tc="res://.godot/imported/pistol_steel_texture.png-e3ace901d760e9542dad82da986a0dc8.s3tc.ctex"
+uid="uid://bxdon328msbqw"
+path.s3tc="res://.godot/imported/impact.png-f25124b1a0bea3daca2c67b895223e0f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://models/pistol_steel_texture.png"
-dest_files=["res://.godot/imported/pistol_steel_texture.png-e3ace901d760e9542dad82da986a0dc8.s3tc.ctex"]
+source_file="res://textures/impact.png"
+dest_files=["res://.godot/imported/impact.png-f25124b1a0bea3daca2c67b895223e0f.s3tc.ctex"]
 
 [params]
 

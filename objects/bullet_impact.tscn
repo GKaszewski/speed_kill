@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://rrri4exuso2l"]
+
+[ext_resource type="Texture2D" uid="uid://bscb3cqyqwdoo" path="res://textures/bullet_impact.png" id="1_dwh8k"]
+[ext_resource type="Script" path="res://scripts/bullet_impact.gd" id="2_3fwc4"]
+
+[node name="Decal" type="Decal"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+size = Vector3(0.15, 0.15, 0.15)
+texture_albedo = ExtResource("1_dwh8k")
+script = ExtResource("2_3fwc4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
