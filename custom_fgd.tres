@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=3 format=3 uid="uid://cfa7h2skrxvc"]
+
+[ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_bk1du"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_esm34"]
+
+[resource]
+script = ExtResource("1_esm34")
+export_file = false
+model_key_word_supported = true
+fgd_name = "SpeedKill"
+base_fgd_files = Array[Resource]([ExtResource("1_bk1du")])
+entity_definitions = Array[Resource]([])

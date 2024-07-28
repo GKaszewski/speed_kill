@@ -31,7 +31,6 @@ func shoot_hitscan() -> void:
 		var decal_instance = decal_scene.instantiate()
 		target.add_child(decal_instance)
 		decal_instance.global_transform.origin = collision_point
-		print("NORMAL", normal)
 		if normal == Vector3(1, 0, 0):
 			decal_instance.rotation_degrees.z = 90
 
