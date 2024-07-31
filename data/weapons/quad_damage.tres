@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuadDamageDecorator" load_steps=2 format=3 uid="uid://4txit3r805k3"]
+
+[ext_resource type="Script" path="res://scripts/quad_damage_decorator.gd" id="1_irbuv"]
+
+[resource]
+script = ExtResource("1_irbuv")
+damage_multiplier = 4.0
+fire_rate = 0.5
+ammo = 10

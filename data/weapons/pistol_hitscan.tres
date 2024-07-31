@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HitScanBehavior" load_steps=3 format=3 uid="uid://bvxmlpqb3vfmu"]
+
+[ext_resource type="PackedScene" uid="uid://rrri4exuso2l" path="res://objects/bullet_impact.tscn" id="1_2q6k6"]
+[ext_resource type="Script" path="res://scripts/hitscan_behavior.gd" id="2_miwi1"]
+
+[resource]
+script = ExtResource("2_miwi1")
+damage = 10.0
+decal_scene = ExtResource("1_2q6k6")
+fire_rate = 0.5
+ammo = 10

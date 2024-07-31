@@ -1,16 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://eog5vf7tjcjc"]
+[gd_scene load_steps=7 format=3 uid="uid://eog5vf7tjcjc"]
 
 [ext_resource type="PackedScene" uid="uid://cdmigc0c1uqd3" path="res://models/pistol.glb" id="1_4qgw5"]
 [ext_resource type="Script" path="res://scripts/weapons.gd" id="1_astit"]
 [ext_resource type="Script" path="res://scripts/weapon.gd" id="2_5ruwb"]
-[ext_resource type="PackedScene" uid="uid://rrri4exuso2l" path="res://objects/bullet_impact.tscn" id="3_tb15y"]
+[ext_resource type="PackedScene" uid="uid://b6yoxkeoe6muk" path="res://objects/explosive_projectile.tscn" id="3_hsytv"]
+[ext_resource type="Script" path="res://scripts/weapon_projectile_behavior.gd" id="4_veypc"]
+
+[sub_resource type="Resource" id="Resource_fsqdm"]
+script = ExtResource("4_veypc")
+projectile_scene = ExtResource("3_hsytv")
+spawn_point = NodePath("spawn_point")
+fire_rate = 0.445
+ammo = 1200
 
 [node name="Weapons" type="Node3D"]
 script = ExtResource("1_astit")
 
 [node name="Pistol" type="Node3D" parent="."]
 script = ExtResource("2_5ruwb")
-decal_scene = ExtResource("3_tb15y")
+behavior = SubResource("Resource_fsqdm")
+
+[node name="spawn_point" type="Node3D" parent="Pistol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.168235, -0.976727)
 
 [node name="pistol" parent="Pistol" instance=ExtResource("1_4qgw5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.289612, -0.460555)

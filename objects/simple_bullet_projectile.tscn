@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dupw1kfh7dy2k"]
+
+[ext_resource type="Script" path="res://scripts/projectile.gd" id="1_rc8y7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7n6mp"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5cnmx"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+collision_layer = 3
+input_ray_pickable = false
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+max_contacts_reported = 4
+contact_monitor = true
+script = ExtResource("1_rc8y7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_7n6mp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_5cnmx")
+
+[connection signal="body_entered" from="." to="." method="_on_impact"]

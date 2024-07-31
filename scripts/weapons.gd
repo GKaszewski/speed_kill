@@ -1,3 +1,4 @@
+class_name Weapons
 extends Node3D
 
 var weapons: Array[Weapon] = []

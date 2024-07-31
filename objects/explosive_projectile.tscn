@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6yoxkeoe6muk"]
+
+[ext_resource type="Script" path="res://scripts/explosive_projectile.gd" id="1_i5tft"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_rftoh"]
+radius = 0.1
+height = 0.1
+radial_segments = 16
+rings = 16
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2airb"]
+radius = 0.1
+
+[node name="ExplosiveProjectile" type="RigidBody3D"]
+collision_layer = 3
+max_contacts_reported = 2
+contact_monitor = true
+script = ExtResource("1_i5tft")
+explosion_radius = 10.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_rftoh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_2airb")
+
+[connection signal="body_entered" from="." to="." method="_on_impact"]
